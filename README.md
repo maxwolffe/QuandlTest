@@ -1,6 +1,33 @@
-# Quandl Stock Data CLI Tool 
+# Quandl Stock Data CLI Tool
 
-This tool supports basic operations over stock dataset from Jan 2017 to July 2017. 
+This tool supports basic operations over stock dataset from Jan 2017 to July 2017.
+
+## Prerequisites
+
+### Python3
+
+If you do not have python3 installed, you will need it for the dependency tooling we are using.
+
+On Mac, you can use [Homebrew](https://brew.sh/) to upgrade.
+
+`brew upgrade python`
+
+### PipEnv
+
+Use pip to install pipenv, which we'll use to pull in dependencies and to create our virtual env.
+
+`pip install pipenv`
+
+
+You can then use pipenv to create a virtual environment.
+
+`pipenv shell`
+
+and install the dependencies from the Pipfile
+
+`pipenv install`
+
+## Usage
 
 ```
 python stock_data.py -h
@@ -22,7 +49,7 @@ optional arguments:
                       opening price.
 ```
 
-The easiest way to get output is to use the tool with no arguments. It will give you the average open and close price for MSFT, COF, and GOOG for each month in the analysis period in json format. 
+The easiest way to get output is to use the tool with no arguments. It will give you the average open and close price for MSFT, COF, and GOOG for each month in the analysis period in json format.
 
 ```
 $ python stock_data.py
@@ -50,11 +77,11 @@ Basic Stock Data for each month between Jan and July 2017:
 ...
 ```
 
-You can specify the stock you want analyzed with the `--stock` flag. 
+You can specify the stock you want analyzed with the `--stock` flag.
 
 `python stock_data.py --stock SGMO`
 
-You can get further output by adding the optional flags specified in the help text. 
+You can get further output by adding the optional flags specified in the help text.
 
 `python stock_data.py --stock SGMO --max-daily-profit`
 
@@ -84,5 +111,4 @@ OK
 
 Alternatively, you can run the tests manually:
 
-`python stock_test.py`. 
-
+`python stock_test.py`.
